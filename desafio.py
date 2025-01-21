@@ -1,13 +1,18 @@
+import textwrap
 from datetime import datetime
 
-menu = """
-    [d] depositar
-    [s] sacar
-    [e] extrato
-    [q] sair
-"""
-data_e_hora_atual = datetime.now()
-data = data_e_hora_atual.strftime("%d/%m/%Y, %H:%M")
+def menu():
+    menu = """\n
+    ================= MENU =================
+    [d]\tDepositar
+    [s]\tSacar
+    [e]\tExtrato
+    [nc]\tNova conta
+    [lc]\tListar contas
+    [nu]\tNovo usuário
+    [q]\tSair
+    ==> """
+    return input(textwrap.dedent(menu))
 
 
 saldo = 0
